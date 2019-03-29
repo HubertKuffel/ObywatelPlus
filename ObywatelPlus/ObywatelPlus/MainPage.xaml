@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ObywatelPlus"
              x:Class="ObywatelPlus.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Text="Damian" Clicked="Button_Clicked" />
+        <Button Grid.Row="1" Text="Hubert" Clicked="Button_Clicked_1" />
+    </Grid>
 
 </ContentPage>
