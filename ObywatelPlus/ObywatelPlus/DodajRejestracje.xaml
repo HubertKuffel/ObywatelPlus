@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ObywatelPlus.DodajRejestracje">
+             x:Class="ObywatelPlus.DodajRejestracje"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <ContentPage.Content>
-        <Grid>
+        <Grid Margin="40">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="auto"/>
@@ -12,8 +13,8 @@
             </Grid.RowDefinitions>
             <ListView x:Name="listRejestracji" />
             <Label Grid.Row="1" Text="Nowa Rejestracja" />
-            <Entry Grid.Row="2" x:Name="rejestacjaText1" Placeholder="Numer rejestracji"/>
-            <Button Grid.Row="3" Text="Dodaj" Clicked="Button_Clicked4" />
+            <Entry Grid.Row="2" x:Name="rejestacjaText1" Placeholder="Numer rejestracji"/> 
+            <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" Text="Dodaj Rejstrację" Clicked="Button_Clicked4" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
