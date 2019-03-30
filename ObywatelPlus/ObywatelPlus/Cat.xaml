@@ -16,8 +16,6 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="25" />
-                    <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
@@ -29,7 +27,6 @@
                     <Image Source="catWhite.png" WidthRequest="60" HeightRequest="60" Margin="25,20,5,20"/>
                     <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Zagubione pupile</Label>
                 </Grid>
-                <Image Grid.Column="3" Source="notification.png" WidthRequest="25" HeightRequest="25"/>
             </Grid>
 
             <Grid Grid.Row="1" Margin="20,30">
