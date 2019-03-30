@@ -5,7 +5,8 @@
              x:Class="ObywatelPlus.MainPage"
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <StackLayout>
-        <StackLayout.Resources>
+        <StackLayout.Resources> 
+            
             <ResourceDictionary>
                 <Style TargetType="Button">
                     <Setter Property="Margin" Value="5"/>
@@ -41,39 +42,24 @@
                     <Image Source="hubertKuffel.png" WidthRequest="60" HeightRequest="60" Margin="25 20 5 20"/>
                     <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Hubert Kuffel</Label>
                 </Grid>
-                <Image Grid.Column="3" Source="notification.png" WidthRequest="25" HeightRequest="25"/>
+                <Image Grid.Column="3" Source="notification.png" WidthRequest="25" HeightRequest="25" VerticalOptions="Start" Margin="0,40,-20,0"/>
             </Grid>
 
             <Grid Grid.Row="1" Margin="20 40">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <material:MaterialCard  CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
-                    <Button Clicked="Button_Clicked" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Button.Image>
-                            <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
-                        </Button.Image>
-                    </Button>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>  
+                    <material:MaterialCard CornerRadius="2" Elevation="3" HeightRequest="70" HorizontalOptions="FillAndExpand" IsClickable="True" Clicked="Button_Clicked">
+                    <Image Source="city.png"/>
                 </material:MaterialCard>
-                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
-                    <Button Clicked="Button_Clicked_1" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Button.Image>
-                            <OnPlatform x:TypeArguments="FileImageSource" Android="car.png"/>
-                        </Button.Image>
-                    </Button>
+                <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="3" HeightRequest="70" HorizontalOptions="FillAndExpand" IsClickable="True" Clicked="Button_Clicked_1">
+                    <Image Source="car.png"/>
                 </material:MaterialCard>
 
-                <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True"  >
-                    <Button Clicked="Button_Clicked_2" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Button.Image>
-                            <OnPlatform x:TypeArguments="FileImageSource" Android="cat.png" />
-                        </Button.Image>
-                    </Button>
+                <material:MaterialCard Grid.Row="2" CornerRadius="2" Elevation="3" HeightRequest="70" HorizontalOptions="FillAndExpand" IsClickable="True" Clicked="Button_Clicked_2">
+                    <Image Source="cat.png"/>
                 </material:MaterialCard>
             </Grid>
         </Grid>
