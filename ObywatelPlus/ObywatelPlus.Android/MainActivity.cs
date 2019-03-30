@@ -28,6 +28,7 @@ namespace ObywatelPlus.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
             RejestracjaChecker.RejestracjaOznaczona += RejestracjaChecker_RejestracjaOznaczona;
+            Damian.ShowMessage += Damian_ShowMessage;
         }
 
         private void RejestracjaChecker_RejestracjaOznaczona(string rejestracja)
@@ -63,6 +64,11 @@ namespace ObywatelPlus.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
         {
             //PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void Damian_ShowMessage(string message)
+        {
+            Toast.MakeText(Application.Context, message, ToastLength.Long).Show();
         }
     }
 }

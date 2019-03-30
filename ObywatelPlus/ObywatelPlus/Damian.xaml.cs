@@ -16,13 +16,16 @@ using System.Net.Sockets;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Security.Cryptography;
+using Android.Widget;
 
 namespace ObywatelPlus
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Damian : ContentPage
 	{
-		public Damian ()
+        public static event Action<string> ShowMessage;
+
+        public Damian ()
 		{
 			InitializeComponent ();
             byte[] imgByte = new byte[] { };
@@ -57,6 +60,8 @@ namespace ObywatelPlus
 
             WyslijButton.Clicked += async (sender, args) =>
             {
+                ShowMessage?.Invoke("Zgłoszenie zostało przyjęte");
+
                 string description = Opis.Text;
                 string coordinates = "Latitude:53.12817|Longitude: 18.020475";
 
