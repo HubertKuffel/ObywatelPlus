@@ -5,21 +5,69 @@
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <ContentPage.Content>
         <Grid>
+            <Image Source="bg.png" Aspect="AspectFill" />
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <material:MaterialTextField x:Name="rejestacjaText" Placeholder="Numer rejestracji" HelperText="np. CB123456" ErrorText="Nieprawidłowy numer" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" />
 
-            <material:MaterialTextField Grid.Row="1" x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" VerticalOptions="FillAndExpand"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="catWhite.png" WidthRequest="60" HeightRequest="60" Margin="25,20,5,20"/>
+                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Zagubione pupile</Label>
+                </Grid>
+                <Image Grid.Column="3" Source="notification.png" WidthRequest="25" HeightRequest="25"/>
+            </Grid>
 
-            <material:MaterialTextField Grid.Row="2" x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HelperText="np. Blokujesz tramwaje ;)" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80"/>
+            <Grid Grid.Row="1" Margin="20,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Margin="40, 10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True" x:Name="CameraButton" Margin="0,0,10,0">
+                        <Image x:Name="PhotoImage" Source="camera.png" HeightRequest="60"/>
+                    </material:MaterialCard>
+                    <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
+                    <Entry x:Name="Lokalizacja" Grid.Row="3" Placeholder="Podaj lokalizację"/>
+                    <material:MaterialButton Grid.Row="4" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                        <Image Source="luczniczka.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </material:MaterialCard>
 
-            <Button Grid.Row="3" Text="Alarmuj"  />
-            <Button Grid.Row="4" Text="Moje Rejestracje"  />
+                    <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                        <Image Source="luczniczka.jpg" HorizontalOptions="FillAndExpand" />
+                    </material:MaterialCard>
+                </Grid>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
