@@ -25,13 +25,23 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" /> 
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <Image Source="hubertKuffel.png" WidthRequest="60" HeightRequest="60" Margin="25 20 5 20"/>
-                <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Hubert Kuffel</Label>
+                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Hubert Kuffel</Label>
+                </Grid>
+                <Image Grid.Column="3" Source="notification.png" WidthRequest="25" HeightRequest="25"/>
             </Grid>
 
             <Grid Grid.Row="1" Margin="20 40">
