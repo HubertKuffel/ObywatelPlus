@@ -3,12 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ObywatelPlus.Hubert">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hubert"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                <Entry x:Name="rejestacjaText"/>
-            <Button Text="Dodaj Rejestrację" Clicked="Button_Clicked" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Button Text="Dodaj zdjęcie (opcjonalnie)"/>
+            <Entry Grid.Row="1" x:Name="rejestacjaText" Placeholder="Numer rejestracji"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Adres (GPS automatycznie)"/>
+                <Button Grid.Column="1" ContentLayout="Top,0" WidthRequest="20" HeightRequest="20">
+                    <Button.Image>
+                        <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
+                    </Button.Image>
+                </Button>
+            </Grid>
+            <Entry Grid.Row="3" Placeholder="Dodatkowe informacje"/>
+
+            <Button Grid.Row="4" Text="Dodaj Rejestrację" Clicked="Button_Clicked" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
