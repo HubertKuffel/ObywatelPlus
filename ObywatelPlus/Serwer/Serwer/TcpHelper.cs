@@ -62,7 +62,7 @@ namespace Serwer
                                 var splitM = message.Split(";");
                                 rejList.Add(new Rej(splitM[1], splitM[2]));
                                 qResult = "Dodano rejestracje do bazy";
-                                Console.WriteLine($"Dodano rejestracje {splitM[1]} do bazy");
+                                Console.WriteLine(DateTime.Now.ToString("yyyy/MM/dd hh:mm") + $" Dodano rejestracje {splitM[1]} do bazy");
                             }
                             else if (message.StartsWith("check_rej"))
                             {
@@ -84,7 +84,7 @@ namespace Serwer
                             {
                                 var splitM = message.Split(";");
                                 desList.Add(new Destruction(splitM[1], "", ""));
-                                Console.WriteLine("Dodano dane zgłoszenia do bazy danych");
+                                Console.WriteLine(DateTime.Now.ToString("yyyy/MM/dd hh:mm") +  " Dodano dane zgłoszenia do bazy danych");
                                 qResult = "true";
                             }
                             else
