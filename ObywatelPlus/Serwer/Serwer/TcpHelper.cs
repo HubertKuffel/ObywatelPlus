@@ -52,9 +52,6 @@ namespace Serwer
 
                         while (message != null && !message.StartsWith("quit"))
                         {
-                            byte[] data = Encoding.ASCII.GetBytes("Send next data: [enter 'quit' to terminate] ");
-                            client.GetStream().Write(data, 0, data.Length);
-
                             byte[] buffer = new byte[1024];
                             client.GetStream().Read(buffer, 0, buffer.Length);
 
@@ -84,9 +81,10 @@ namespace Serwer
                             }
 
                             Send(client, qResult);
+                            Console.WriteLine("Closing connection.");
+                            client.GetStream().Dispose();
+                            message = null;
                         }
-                        Console.WriteLine("Closing connection.");
-                        client.GetStream().Dispose();
                     }
                 }
             }

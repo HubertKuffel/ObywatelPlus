@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
 using Xamarin.Forms;
 
 namespace ObywatelPlus
@@ -14,6 +14,9 @@ namespace ObywatelPlus
             InitializeComponent();
 
             MainPage = new NavigationPage(new ObywatelPlus.MainPage());
+            Thread thread = new Thread(RejestracjaChecker.CheckerLoop);
+            thread.IsBackground = true;
+            thread.Start();
         }
 
         protected override void OnStart()

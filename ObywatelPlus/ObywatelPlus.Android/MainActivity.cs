@@ -21,6 +21,15 @@ namespace ObywatelPlus.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            RejestracjaChecker.RejestracjaOznaczona += RejestracjaChecker_RejestracjaOznaczona;
+        }
+
+        private void RejestracjaChecker_RejestracjaOznaczona(string rejestracja)
+        {
+            RunOnUiThread(() =>
+            {
+                Toast.MakeText(ApplicationContext, "U", ToastLength.Short).Show();
+            });
         }
     }
 }

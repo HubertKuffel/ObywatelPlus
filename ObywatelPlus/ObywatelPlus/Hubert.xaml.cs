@@ -16,5 +16,14 @@ namespace ObywatelPlus
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            var rejestracja = this.rejestacjaText.Text;
+            if (!string.IsNullOrEmpty(rejestracja))
+            {
+                RejestracjaChecker.Rejestracje.Add(rejestracja);
+            }
+        }
+    }
 }

@@ -7,6 +7,8 @@
             <Label Text="Hubert"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <Entry x:Name="rejestacjaText"/>
+            <Button Text="Dodaj Rejestrację" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
