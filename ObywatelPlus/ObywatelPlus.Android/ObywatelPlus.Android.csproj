@@ -133,6 +133,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\luczniczka.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\notification.png" />
+  </ItemGroup>
   <Import Project="..\ObywatelPlus\ObywatelPlus.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
