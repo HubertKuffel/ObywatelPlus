@@ -5,37 +5,62 @@
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms">
     <ContentPage.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid Margin="40, 20">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True" x:Name="CameraButton">
-                    <Image x:Name="PhotoImage" Source="camera.png"/>
-                </material:MaterialCard>
-                <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
-                <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
-            </Grid>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="20" />
-                </Grid.ColumnDefinitions>
-                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
-                    <Image Source="city.png" />
-                </material:MaterialCard>
+            <Image Source="bg.png" Aspect="AspectFill" />
 
-                <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
-                    <Image Source="car.png" />
-                </material:MaterialCard>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="cityWhite.png" WidthRequest="60" HeightRequest="60" Margin="10,30,10,5"/>
+                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White">Zadbane Miasto</Label>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="20,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Margin="40, 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True" x:Name="CameraButton">
+                        <Image x:Name="PhotoImage" Source="camera.png" HeightRequest="60"/>
+                    </material:MaterialCard>
+                    <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
+                    <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                        <Image Source="luczniczka.jpg" />
+                    </material:MaterialCard>
+
+                    <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                        <Image Source="luczniczka.jpg" />
+                    </material:MaterialCard>
+                </Grid>
             </Grid>
         </Grid>
     </ContentPage.Content>
