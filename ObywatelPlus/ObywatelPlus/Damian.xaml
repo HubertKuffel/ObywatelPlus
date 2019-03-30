@@ -18,7 +18,7 @@
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" x:Name="PhotoImage"/>
                 <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True" x:Name="CameraButton">
-                    <Image Source="car.png"/>
+                    <Image Source="camera.png"/>
                 </material:MaterialCard> 
                 <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/> 
                 <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
