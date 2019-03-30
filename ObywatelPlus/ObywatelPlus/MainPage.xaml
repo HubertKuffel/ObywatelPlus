@@ -33,7 +33,7 @@
                     <Image Source="hubertKuffel.png" WidthRequest="60" HeightRequest="60" Margin="25 20 5 20"/>
                 <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Hubert Kuffel</Label>
             </Grid>
-            
+
             <Grid Grid.Row="1" Margin="20 40">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -49,7 +49,7 @@
                             <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
                         </Button.Image>
                     </Button>
-                </material:MaterialCard> 
+                </material:MaterialCard>
                 <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
                     <Button Clicked="Button_Clicked_1" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                         <Button.Image>
@@ -64,9 +64,9 @@
                             <OnPlatform x:TypeArguments="FileImageSource" Android="cat.png" />
                         </Button.Image>
                     </Button>
-                </material:MaterialCard> 
+                </material:MaterialCard>
             </Grid>
         </Grid>
-        
+
     </StackLayout>
 </ContentPage>
