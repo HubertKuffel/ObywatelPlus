@@ -4,22 +4,20 @@
              x:Class="ObywatelPlus.Hubert"
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <ContentPage.Content>
-        <Grid>
+        <Grid Margin="40">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Entry x:Name="rejestacjaText1" Placeholder="Numer rejestracji" HeightRequest="80" />
+            <Entry x:Name="rejestacjaText1" Placeholder="Numer rejestracji" HeightRequest="50" />
+            <Entry Grid.Row="1"  x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HeightRequest="50" />
+             
+            <material:MaterialButton Grid.Row="2" BackgroundColor="#EAEAEA" Text="Alarmuj" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
+ 
+            <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" Text="Moje Rejestracje" Clicked="Button_Clicked1" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
 
-            <material:MaterialTextField Grid.Row="1" x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" VerticalOptions="FillAndExpand"/>
-
-            <material:MaterialTextField Grid.Row="2" x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HelperText="np. Blokujesz tramwaje ;)" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80"/>
-
-            <Button Grid.Row="3" Text="Alarmuj" Clicked="Button_Clicked" />
-            <Button Grid.Row="4" Text="Moje Rejestracje" Clicked="Button_Clicked1" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
