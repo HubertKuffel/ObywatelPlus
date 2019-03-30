@@ -9,8 +9,10 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Image x:Name="PhotoImage" />
-                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+                <Image Grid.Row="0" x:Name="PhotoImage"/>
+                <Button Grid.Row="1" x:Name="CameraButton" Text="Zrób zdjęcie"/>
+                <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
+                <Button x:Name="WyslijButton" Grid.Row="3" Text="Wyślij"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
