@@ -12,22 +12,11 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <material:MaterialTextField x:Name="rejestacjaText" Placeholder="Numer rejestracji" HelperText="np. CB123456" ErrorText="Nieprawidłowy numer" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
+            <material:MaterialTextField x:Name="rejestacjaText" Placeholder="Numer rejestracji" HelperText="np. CB123456" ErrorText="Nieprawidłowy numer" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" />
 
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
+            <material:MaterialTextField Grid.Row="1" x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" VerticalOptions="FillAndExpand"/>
 
-                <material:MaterialTextField x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
-                <Button Grid.Column="1" ContentLayout="Top,0" WidthRequest="20" HeightRequest="20">
-                    <Button.Image>
-                        <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
-                    </Button.Image>
-                </Button>
-            </Grid>
-            <material:MaterialTextField Grid.Row="2" x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HelperText="np. Blokujesz tramwaje ;)" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
+            <material:MaterialTextField Grid.Row="2" x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HelperText="np. Blokujesz tramwaje ;)" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80"/>
 
             <Button Grid.Row="3" Text="Alarmuj" Clicked="Button_Clicked" />
             <Button Grid.Row="4" Text="Moje Rejestracje" Clicked="Button_Clicked1" />
