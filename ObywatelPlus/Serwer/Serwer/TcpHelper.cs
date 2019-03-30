@@ -19,13 +19,13 @@ namespace Serwer
 
         public static void StartServer(int port)
         {
-            IPAddress address = IPAddress.Parse("127.0.0.1");
+            IPAddress address = IPAddress.Any;
             listener = new TcpListener(address, port);
 
             listener.Start();
             accept = true;
             rejList = new List<Rej>();
-            Console.WriteLine($"Server started. Listening to TCP clients at 127.0.0.1:{port}");
+            Console.WriteLine($"Server started. Listening to TCP clients at {port}");
         }
         public static void Send(TcpClient client, string message)
         {
@@ -71,7 +71,8 @@ namespace Serwer
                             {
                                 var splitM = message.Split(";");
                                 var rejestracja = rejList.FirstOrDefault(rej => rej.RejNumber == splitM[1]);
-                                if (rejestracja != null) {
+                                if (rejestracja != null)
+                                {
                                     rejList.Remove(rejestracja);
 
                                     qResult = "true";
