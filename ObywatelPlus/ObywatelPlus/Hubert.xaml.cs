@@ -17,12 +17,17 @@ namespace ObywatelPlus
 			InitializeComponent ();
 		}
 
+        private async void Button_Clicked1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DodajRejestracje());
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
             var rejestracja = this.rejestacjaText.Text;
             if (!string.IsNullOrEmpty(rejestracja))
             {
-                RejestracjaChecker.Rejestracje.Add(rejestracja);
+                RejestracjaChecker.Alarm(rejestracja);
             }
         }
     }

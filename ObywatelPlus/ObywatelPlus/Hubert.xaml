@@ -10,6 +10,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Button Text="Dodaj zdjęcie (opcjonalnie)"/>
             <Entry Grid.Row="1" x:Name="rejestacjaText" Placeholder="Numer rejestracji"/>
@@ -27,7 +28,8 @@
             </Grid>
             <Entry Grid.Row="3" Placeholder="Dodatkowe informacje"/>
 
-            <Button Grid.Row="4" Text="Dodaj Rejestrację" Clicked="Button_Clicked" />
+            <Button Grid.Row="4" Text="Alarmuj" Clicked="Button_Clicked" />
+            <Button Grid.Row="5" Text="Moje Rejestracje" Clicked="Button_Clicked1" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
