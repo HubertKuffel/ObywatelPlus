@@ -1,19 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ObywatelPlus.Damian">
+             x:Class="ObywatelPlus.Damian"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms">
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" x:Name="PhotoImage"/>
-                <Button Grid.Row="1" x:Name="CameraButton" Text="Zrób zdjęcie"/>
-                <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
-                <Button x:Name="WyslijButton" Grid.Row="3" Text="Wyślij"/>
+                <material:MaterialCard Grid.Row="1" CornerRadius="2" Elevation="1" HeightRequest="80" HorizontalOptions="FillAndExpand" IsClickable="True" x:Name="CameraButton">
+                    <Image Source="car.png"/>
+                </material:MaterialCard> 
+                <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/> 
+                <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
             </Grid>
-        </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
+                    <Button ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
+                        </Button.Image>
+                    </Button>
+                </material:MaterialCard>
+
+
+                <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
+                    <Button ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource" Android="car.png" />
+                        </Button.Image>
+                    </Button>
+                </material:MaterialCard>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
