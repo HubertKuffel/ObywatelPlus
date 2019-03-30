@@ -79,13 +79,17 @@ namespace Serwer
                                     qResult = "false";
                                 }
                             }
-                            
+
                             else if (message.StartsWith("new_des")) // syntax of query: new_des;Picture.jpg;GPSCoordinates;Description;
                             {
                                 var splitM = message.Split(";");
                                 desList.Add(new Destruction(splitM[1], "", ""));
-                                Console.WriteLine(DateTime.Now.ToString("yyyy/MM/dd hh:mm") +  " Dodano dane zgłoszenia do bazy danych");
+                                Console.WriteLine(DateTime.Now.ToString("yyyy/MM/dd hh:mm") + " Dodano dane zgłoszenia do bazy danych");
                                 qResult = "true";
+                            }
+                            else if (message.StartsWith("kotek"))
+                            {
+                                Console.WriteLine(DateTime.Now.ToString("yyyy/MM/dd hh:mm") + " Przyjęto zgłoszenie o zagubionym zwierzaku");
                             }
                             else
                             {
