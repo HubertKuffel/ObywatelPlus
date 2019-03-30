@@ -38,7 +38,7 @@
         <ListView x:Name="listRejestracji" />
         <Label Grid.Row="1" Text="Nowa Rejestracja" />
         <Entry Grid.Row="2" x:Name="rejestacjaText1" Placeholder="Numer rejestracji"/>
-        <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" Text="Dodaj Rejstrację" Clicked="Button_Clicked4" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
+                <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" Text="Dodaj Rejstrację" Clicked="Button_Clicked4" HorizontalOptions="Center" TextColor="#1a1a1a" VerticalOptions="Center" />
       </Grid>
     </Grid>
   </ContentPage.Content>

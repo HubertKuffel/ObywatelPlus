@@ -47,7 +47,7 @@
 
                     <Label Grid.Row="1" Text="Opis problemu" Margin="0,20,0,0"/>
                     <Entry x:Name="Opis" Grid.Row="2" Placeholder="Wprowadź opis"/>
-                    <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="Black" VerticalOptions="Center" />
+                    <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" x:Name="WyslijButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="#1a1a1a" VerticalOptions="Center" />
                     <Label Grid.Row="4" x:Name="existingdmianbutton" HorizontalOptions="Center" Text="Zobacz istniejące ogłoszenia" TextColor="#1a1a1a" VerticalOptions="Center"/>
                 </Grid>
             </Grid>

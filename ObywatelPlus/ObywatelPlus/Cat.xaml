@@ -46,7 +46,7 @@
                     </material:MaterialCard>
                     <Entry x:Name="Opis" Grid.Row="1" Placeholder="Wprowadź opis"/>
                     <Entry x:Name="Lokalizacja" Grid.Row="2" Placeholder="Podaj lokalizację"/>
-                    <material:MaterialButton Grid.Row="3" BackgroundColor="#f26414ff" x:Name="WyslijCatButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="White" VerticalOptions="Center" ButtonType="Elevated" />
+                    <material:MaterialButton Grid.Row="3" BackgroundColor="#f26414ff" x:Name="WyslijCatButton" HorizontalOptions="Center" Text="Wyślij zgłoszenie" TextColor="#1a1a1a" VerticalOptions="Center" ButtonType="Elevated" />
                     <Label Grid.Row="4" x:Name="existingButton" HorizontalOptions="Center" Text="Zobacz istniejące ogłoszenia" TextColor="#1a1a1a" VerticalOptions="Center"/>
                 </Grid>
             </Grid>

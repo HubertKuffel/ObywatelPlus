@@ -43,11 +43,15 @@
 
             <Label Grid.Row="2" Text="Dodatkowe informacje" />
             <Entry Grid.Row="3"  x:Name="dodatkoweText" Placeholder="np. Blokujesz tramwaj ;)" HeightRequest="50" />
-             
-            <material:MaterialButton Grid.Row="4" BackgroundColor="#EAEAEA" Text="Alarmuj" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
- 
-            <material:MaterialButton Grid.Row="5" BackgroundColor="#EAEAEA" Text="Moje Rejestracje" Clicked="Button_Clicked1" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
 
+                <Grid Grid.Row="4" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <material:MaterialButton  BackgroundColor="#EAEAEA" Text="Moje Rejestracje" Clicked="Button_Clicked1" HorizontalOptions="Center" TextColor="#1a1a1a" VerticalOptions="Center" />
+                    <material:MaterialButton Grid.Column="1" BackgroundColor="#EAEAEA" Text="Alarmuj" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="#1a1a1a" VerticalOptions="Center" />
+                </Grid>
             </Grid>
         </Grid>
     </ContentPage.Content>
