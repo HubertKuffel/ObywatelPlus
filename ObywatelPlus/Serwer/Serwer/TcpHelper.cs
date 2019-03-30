@@ -15,6 +15,7 @@ namespace Serwer
         private static TcpListener listener { get; set; }
         private static bool accept { get; set; } = false;
         public static List<Rej> rejList;
+        public static List<Destruction> desList;
 
 
         public static void StartServer(int port)
@@ -25,6 +26,7 @@ namespace Serwer
             listener.Start();
             accept = true;
             rejList = new List<Rej>();
+            desList = new List<Destruction>();
             Console.WriteLine($"Server started. Listening to TCP clients at {port}");
         }
         public static void Send(TcpClient client, string message)
@@ -57,7 +59,7 @@ namespace Serwer
 
                             message = Encoding.ASCII.GetString(buffer);
                             Console.WriteLine(message);
-                            string qResult = "query nie pykneło";
+                            string qResult = "query has a wrong syntax";
                             if (message.StartsWith("new_rej"))
                             {
                                 var splitM = message.Split(";");
@@ -79,7 +81,18 @@ namespace Serwer
                                     qResult = "false";
                                 }
                             }
-
+                            
+                            if (message.StartsWith("new_des")) // syntax of query: new_des;Picture.jpg;GPSCoordinates;Description;
+                            {
+                                var splitM = message.Split(";");
+                                desList.Add(new Destruction(splitM[1], splitM[2], splitM[3]));
+                                Console.WriteLine("Destruction report added to dB " + splitM[1]+" "+splitM[2] + " " + splitM[3]);
+                                qResult = "true";
+                            }
+                            else
+                            {
+                                qResult = "false";
+                            }
                             Send(client, qResult);
                             Console.WriteLine("Closing connection.");
                             client.GetStream().Dispose();
