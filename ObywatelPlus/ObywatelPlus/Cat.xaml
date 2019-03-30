@@ -19,13 +19,13 @@
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
-                    <Image Source="catWhite.png" WidthRequest="60" HeightRequest="60" Margin="25,20,5,20"/>
-                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White">Zagubione pupile</Label>
+                    <Image Source="catWhite.png" WidthRequest="60" HeightRequest="60" Margin="10,30,10,5"/>
+                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White">Zagubione Pupile</Label>
                 </Grid>
             </Grid>
 
