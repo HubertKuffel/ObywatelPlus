@@ -124,6 +124,15 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\luczniczka.jpg" />
+  </ItemGroup>
   <Import Project="..\ObywatelPlus\ObywatelPlus.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
