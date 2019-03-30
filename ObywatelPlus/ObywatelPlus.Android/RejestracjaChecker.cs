@@ -42,9 +42,35 @@ namespace ObywatelPlus
                         writer.WriteLine(message);
                     }
                     var result = bool.Parse(reader.ReadLine());
-                    if (!result)
+                    if (result)
                     {
                         RejestracjaOznaczona?.Invoke(rej);
+                    }
+                }
+                client.Dispose();
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        public static void Alarm(string rejestracja)
+        {
+            var message = "new_rej;" + rejestracja + ";" + "opis;";
+            var client = new TcpClient();
+            IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse("149.56.102.192"), 5678);
+            try
+            {
+                client.Connect(ipEndPoint);
+                if (client.Connected)
+                {
+                    var reader = new StreamReader(client.GetStream());
+                    var writer = new StreamWriter(client.GetStream());
+                    writer.AutoFlush = true;
+
+                    if (client.Connected)
+                    {
+                        writer.WriteLine(message);
                     }
                 }
                 client.Dispose();
