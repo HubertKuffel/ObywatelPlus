@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ObywatelPlus" 
-             x:Class="ObywatelPlus.MainPage">
+             x:Class="ObywatelPlus.MainPage"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <StackLayout>
         <StackLayout.Resources>
             <ResourceDictionary>
@@ -41,16 +42,22 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Clicked="Button_Clicked" ContentLayout="Top,0">
-                    <Button.Image>
-                        <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
-                    </Button.Image>
-                </Button>
-                <Button Grid.Column="2" Clicked="Button_Clicked_1" ContentLayout="Top,0">
-                    <Button.Image>
-                        <OnPlatform x:TypeArguments="FileImageSource" Android="car.png" />
-                    </Button.Image>
-                </Button>
+                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
+                    <Button Clicked="Button_Clicked" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
+                        </Button.Image>
+                    </Button>
+                </material:MaterialCard>
+                
+
+                <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
+                    <Button Clicked="Button_Clicked_1" ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource" Android="car.png" />
+                        </Button.Image>
+                    </Button>
+                </material:MaterialCard>
             </Grid>
         </Grid>
         

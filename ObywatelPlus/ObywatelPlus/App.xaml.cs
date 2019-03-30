@@ -12,6 +12,7 @@ namespace ObywatelPlus
         public App()
         {
             InitializeComponent();
+            XF.Material.Forms.Material.Init(this);
 
             MainPage = new NavigationPage(new ObywatelPlus.MainPage());
             Thread thread = new Thread(RejestracjaChecker.CheckerLoop);

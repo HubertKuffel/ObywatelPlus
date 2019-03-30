@@ -6,10 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V4.Content;
-using Android.Support.V4.App;
 using Plugin.Media;
 using Plugin.Permissions;
+using Android.Support.V7.App;
+using Android.Support.V4.App;
 
 namespace ObywatelPlus.Droid
 {

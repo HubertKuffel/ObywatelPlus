@@ -1,6 +1,4 @@
 ﻿using Android.Content;
-using Android.Support.V4.App;
-using Android.Support.V4.Content;
 using ObywatelPlus.Droid;
 using Plugin.Media;
 using Plugin.Media.Abstractions;

@@ -1,35 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ObywatelPlus.Hubert">
+             x:Class="ObywatelPlus.Hubert"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Button Text="Dodaj zdjęcie (opcjonalnie)"/>
-            <Entry Grid.Row="1" x:Name="rejestacjaText" Placeholder="Numer rejestracji"/>
-            <Grid Grid.Row="2">
+            <material:MaterialTextField x:Name="rejestacjaText" Placeholder="Numer rejestracji" HelperText="np. CB123456" ErrorText="Nieprawidłowy numer" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
+
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Entry Placeholder="Adres (GPS automatycznie)"/>
+
+                <material:MaterialTextField x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
                 <Button Grid.Column="1" ContentLayout="Top,0" WidthRequest="20" HeightRequest="20">
                     <Button.Image>
                         <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
                     </Button.Image>
                 </Button>
             </Grid>
-            <Entry Grid.Row="3" Placeholder="Dodatkowe informacje"/>
+            <material:MaterialTextField Grid.Row="2" x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HelperText="np. Blokujesz tramwaje ;)" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="50"/>
 
-            <Button Grid.Row="4" Text="Alarmuj" Clicked="Button_Clicked" />
-            <Button Grid.Row="5" Text="Moje Rejestracje" Clicked="Button_Clicked1" />
+            <Button Grid.Row="3" Text="Alarmuj" Clicked="Button_Clicked" />
+            <Button Grid.Row="4" Text="Moje Rejestracje" Clicked="Button_Clicked1" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
