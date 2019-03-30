@@ -9,7 +9,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid>
+            <Grid Margin="40, 20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
@@ -29,21 +29,12 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
-                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
-                    <Button ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Button.Image>
-                            <OnPlatform x:TypeArguments="FileImageSource" Android="city.png" />
-                        </Button.Image>
-                    </Button>
+                <material:MaterialCard Grid.Column="1" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                    <Image Source="city.png" />
                 </material:MaterialCard>
 
-
-                <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand">
-                    <Button ContentLayout="Top,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Button.Image>
-                            <OnPlatform x:TypeArguments="FileImageSource" Android="car.png" />
-                        </Button.Image>
-                    </Button>
+                <material:MaterialCard Grid.Column="2" CornerRadius="2" Elevation="3" HeightRequest="80" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                    <Image Source="car.png" />
                 </material:MaterialCard>
             </Grid>
         </Grid>
