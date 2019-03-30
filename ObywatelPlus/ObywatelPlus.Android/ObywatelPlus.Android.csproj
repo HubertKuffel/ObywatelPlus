@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ObywatelPlus.Droid</RootNamespace>
     <AssemblyName>ObywatelPlus.Android</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -87,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\carWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cityWhite.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\hubertKuffel.png" />
