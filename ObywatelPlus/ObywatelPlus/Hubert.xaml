@@ -4,20 +4,51 @@
              x:Class="ObywatelPlus.Hubert"
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" >
     <ContentPage.Content>
-        <Grid Margin="40">
+        <Grid>
+            <Image Source="bg.png" Aspect="AspectFill" />
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="auto" /> 
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="carWhite.png" WidthRequest="60" HeightRequest="60" Margin="10,30,10,5"/>
+                    <Label Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White">Auto-Bezpieczeństwo</Label>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="20,30">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Entry x:Name="rejestacjaText1" Placeholder="Numer rejestracji" HeightRequest="50" />
-            <Entry Grid.Row="1"  x:Name="dodatkoweText" Placeholder="Dodatkowe informacje (opcjonalnie)" HeightRequest="50" />
-             
-            <material:MaterialButton Grid.Row="2" BackgroundColor="#EAEAEA" Text="Alarmuj" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
- 
-            <material:MaterialButton Grid.Row="3" BackgroundColor="#EAEAEA" Text="Moje Rejestracje" Clicked="Button_Clicked1" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
 
+            <Label Grid.Row="0" Text="Numer rejestracji" />
+            <Entry Grid.Row="1" x:Name="rejestacjaText1" Placeholder="np. CB123456" HeightRequest="50" Margin="0,0,0,30"/>
+
+            <Label Grid.Row="2" Text="Dodatkowe informacje" />
+            <Entry Grid.Row="3"  x:Name="dodatkoweText" Placeholder="np. Blokujesz tramwaj ;)" HeightRequest="50" />
+             
+            <material:MaterialButton Grid.Row="4" BackgroundColor="#EAEAEA" Text="Alarmuj" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
+ 
+            <material:MaterialButton Grid.Row="5" BackgroundColor="#EAEAEA" Text="Moje Rejestracje" Clicked="Button_Clicked1" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" />
+
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
