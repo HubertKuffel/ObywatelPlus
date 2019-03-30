@@ -43,12 +43,10 @@ namespace Serwer
                 // Continue listening.  
                 while (true)
                 {
-                    Console.WriteLine("Waiting for client...");
                     var clientTask = listener.AcceptTcpClientAsync(); // Get the client  
 
                     if (clientTask.Result != null)
                     {
-                        Console.WriteLine("Client connected. Waiting for data.");
                         var client = clientTask.Result;
                         string message = "";
 
@@ -58,15 +56,15 @@ namespace Serwer
                             client.GetStream().Read(buffer, 0, buffer.Length);
 
                             message = Encoding.ASCII.GetString(buffer);
-                            Console.WriteLine(message);
                             string qResult = "query has a wrong syntax";
                             if (message.StartsWith("new_rej"))
                             {
                                 var splitM = message.Split(";");
                                 rejList.Add(new Rej(splitM[1], splitM[2]));
                                 qResult = "Dodano rejestracje do bazy";
+                                Console.WriteLine($"Dodano rejestracje {splitM[1]} do bazy");
                             }
-                            if (message.StartsWith("check_rej"))
+                            else if (message.StartsWith("check_rej"))
                             {
                                 var splitM = message.Split(";");
                                 var rejestracja = rejList.FirstOrDefault(rej => rej.RejNumber == splitM[1]);
@@ -82,11 +80,11 @@ namespace Serwer
                                 }
                             }
                             
-                            if (message.StartsWith("new_des")) // syntax of query: new_des;Picture.jpg;GPSCoordinates;Description;
+                            else if (message.StartsWith("new_des")) // syntax of query: new_des;Picture.jpg;GPSCoordinates;Description;
                             {
                                 var splitM = message.Split(";");
-                                desList.Add(new Destruction(splitM[1], splitM[2], splitM[3]));
-                                Console.WriteLine("Destruction report added to dB " + splitM[1]+" "+splitM[2] + " " + splitM[3]);
+                                desList.Add(new Destruction(splitM[1], "", ""));
+                                Console.WriteLine("Dodano dane zgłoszenia do bazy danych");
                                 qResult = "true";
                             }
                             else
@@ -94,7 +92,6 @@ namespace Serwer
                                 qResult = "false";
                             }
                             Send(client, qResult);
-                            Console.WriteLine("Closing connection.");
                             client.GetStream().Dispose();
                             message = null;
                         }
