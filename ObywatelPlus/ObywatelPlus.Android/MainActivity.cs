@@ -34,17 +34,17 @@ namespace ObywatelPlus.Droid
         {
             RunOnUiThread(() =>
             {
-                CreateNotification();
+                CreateNotification(rejestracja);
             });
         }
 
 
-        void CreateNotification()
+        void CreateNotification(string rejestracja)
         {
             // Instantiate the builder and set notification elements:
             var builder = new NotificationCompat.Builder(this)
-                .SetContentTitle("Sample Notification")
-                .SetContentText("Hello World! This is my first notification!")
+                .SetContentTitle("Uwaga na samochód")
+                .SetContentText("Twój samochód o rejestracji: " + rejestracja + " został otagowany" )
                 .SetSmallIcon(Resource.Drawable.car)
                 .SetWhen(Java.Lang.JavaSystem.CurrentTimeMillis());
 

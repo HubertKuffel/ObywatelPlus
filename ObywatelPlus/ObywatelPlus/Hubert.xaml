@@ -12,7 +12,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <material:MaterialTextField x:Name="rejestacjaText" Placeholder="Numer rejestracji" HelperText="np. CB123456" ErrorText="Nieprawidłowy numer" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" />
+            <Entry x:Name="rejestacjaText1" Placeholder="Numer rejestracji" HeightRequest="80" />
 
             <material:MaterialTextField Grid.Row="1" x:Name="adresText" Placeholder="Adres (opcjonalnie)" HelperText="np. Gdańska 32" ErrorText="Nieprawidłowy adres" InputType="Default" FloatingPlaceholderEnabled="True" HeightRequest="80" VerticalOptions="FillAndExpand"/>
 

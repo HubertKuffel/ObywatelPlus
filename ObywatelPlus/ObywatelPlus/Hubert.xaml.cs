@@ -24,7 +24,7 @@ namespace ObywatelPlus
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            var rejestracja = this.rejestacjaText.Text;
+            var rejestracja = this.rejestacjaText1.Text;
             if (!string.IsNullOrEmpty(rejestracja))
             {
                 RejestracjaChecker.Alarm(rejestracja);
